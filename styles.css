@@ -1,0 +1,152 @@
+@font-face {
+    font-family: lexend;
+    src: url("fonts/LexendDeca-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: shoulders;
+    src: url("fonts/BigShouldersDisplay-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*      GENERAL     */
+
+html{
+    margin: 0;
+    font-family: 'lexend', 'Verdana', 'sans-serif';
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'shoulders', 'monospace', 'monospace';
+    text-transform: uppercase;
+    color: hsl(0, 0%, 95%);
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+button {
+    background-color: hsl(0, 0% ,95%);
+    border: none;
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-size: 1rem;
+    max-width: 200px ;
+    min-width: 120px;
+}
+
+button:hover{
+    outline: 2px solid hsl(0, 0% ,95%);
+    color: hsl(0, 0% ,95%);
+    background-color: transparent;
+}
+
+
+/*      GRID SYSTEM     */
+
+.container {
+    min-width: 65%;
+    max-width: 70%;
+    margin: 10% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    max-height: 50px;
+    max-width: 50px;
+}
+
+
+[class*="col-"] {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 220px;
+
+}
+
+.col-1 {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 5px 0 0 5px;
+
+}
+
+.col-2 {
+    background-color: hsl(184, 100%, 22%) ;
+}
+
+.col-3 {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 5px 5px 0;
+}
+
+.col-1 button {
+    color: hsl(31, 77%, 52%);
+}
+
+.col-2 button {
+    color: hsl(184, 100%, 22%);
+}
+
+.col-3 button {
+    color: hsl(179, 100%, 13%);
+}
+.col-1 button:hover, .col-2 button:hover, .col-3 button:hover{
+    color: hsl(0, 0%, 95%);
+}
+
+@media (max-width: 1222px) {
+    body {
+        overflow: auto;
+    }
+
+    .container{
+        flex-wrap: wrap;
+    }
+
+    button {
+        align-self: flex-start;
+    }
+
+    .col-1 {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .col-3 {
+        border-radius: 0 0 5px 5px;
+    }
+}
